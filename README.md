@@ -4,12 +4,16 @@ One-click Virtual Audio Cable configuration. Because clicking through audio sett
 
 ## Usage
 
-Run `VAC.ps1` to execute both batch scripts and configure your VAC setup automatically.
+Run `VAC.ps1` to start the audio repeaters.
+
+To have it run automatically at every login, run `Register-ScheduledTask.ps1` once as administrator. It registers a scheduled task that fires `VAC.ps1` on logon, then you never have to think about it again.
 
 ## Scripts
 
-- `VAC_Speakers.bat` - Configures speaker routing
-- `VAC_Dac.bat` - Configures DAC routing
+- `VAC.ps1` - runs both batch scripts
+- `VAC_Speakers.bat` - configures speaker routing
+- `VAC_Dac.bat` - configures DAC routing
+- `Register-ScheduledTask.ps1` - registers a logon scheduled task for `VAC.ps1`
 
 ## Requirements
 
