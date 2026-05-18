@@ -11,6 +11,7 @@ To have it run automatically at every login, run `Register-ScheduledTask.ps1` on
 ## Scripts
 
 - `VAC.ps1` - runs both batch scripts
+- `Stop-VAC.ps1` - kills any running audio repeater processes
 - `VAC_Speakers.bat` - configures speaker routing
 - `VAC_Dac.bat` - configures DAC routing
 - `Register-ScheduledTask.ps1` - registers a logon scheduled task for `VAC.ps1`
