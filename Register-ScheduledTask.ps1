@@ -1,5 +1,4 @@
-$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$vacScript = Join-Path $scriptDir "VAC.ps1"
+$vacScript = Join-Path $PSScriptRoot "VAC.ps1"
 
 $action = New-ScheduledTaskAction `
     -Execute "powershell.exe" `
