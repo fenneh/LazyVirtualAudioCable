@@ -1,3 +1,5 @@
+#Requires -RunAsAdministrator
+
 $vacScript = Join-Path $PSScriptRoot "VAC.ps1"
 
 $action = New-ScheduledTaskAction `
@@ -23,4 +25,4 @@ Register-ScheduledTask `
     -Settings $settings `
     -Description "Auto-configure Virtual Audio Cable at login" | Out-Null
 
-Write-Host "Scheduled task '$taskName' registered — will run at login."
+Write-Host "Scheduled task '$taskName' registered - will run at login."
