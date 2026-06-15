@@ -1,5 +1,7 @@
 # LazyVirtualAudioCable
 
+![CI](https://github.com/fenneh/LazyVirtualAudioCable/actions/workflows/ci.yml/badge.svg)
+
 One-click Virtual Audio Cable configuration. Because clicking through audio settings repeatedly is not how anyone wants to spend their evening.
 
 ## Usage
