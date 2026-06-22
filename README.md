@@ -4,11 +4,13 @@
 
 One-click Virtual Audio Cable configuration. Because clicking through audio settings repeatedly is not how anyone wants to spend their evening.
 
-## Usage
+## Setup
 
-Run `VAC.ps1` to start the audio repeaters.
+1. Edit `VAC_Speakers.bat` and `VAC_Dac.bat`. Set `arInput` and `arOutput` to the device names as they appear in Audio Repeater's dropdown. The names must match exactly.
 
-To have it run automatically at every login, run `Register-ScheduledTask.ps1` once as administrator. It registers a scheduled task that fires `VAC.ps1` on logon, then you never have to think about it again.
+2. Run `VAC.ps1` to start the repeaters.
+
+For automatic startup, run `Register-ScheduledTask.ps1` as administrator once. It registers a logon task that runs `VAC.ps1` each time you sign in.
 
 ## Scripts
 
