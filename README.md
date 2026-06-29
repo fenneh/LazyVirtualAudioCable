@@ -16,6 +16,7 @@ For automatic startup, run `Register-ScheduledTask.ps1` as administrator once. I
 
 - `VAC.ps1` - runs both batch scripts
 - `Stop-VAC.ps1` - kills any running audio repeater processes
+- `Restart-VAC.ps1` - stops running repeaters and starts fresh
 - `VAC_Speakers.bat` - configures speaker routing
 - `VAC_Dac.bat` - configures DAC routing
 - `Register-ScheduledTask.ps1` - registers a logon scheduled task for `VAC.ps1`
