@@ -6,7 +6,7 @@ One-click Virtual Audio Cable configuration. Because clicking through audio sett
 
 ## Setup
 
-1. Edit `VAC_Speakers.bat` and `VAC_Dac.bat`. Set `arInput` and `arOutput` to the device names as they appear in Audio Repeater's dropdown. The names must match exactly.
+1. Edit `VAC.ps1`. Set `-InputDevice` and `-OutputDevice` to the device names as they appear in Audio Repeater's dropdown. The names must match exactly.
 
 2. Run `VAC.ps1` to start the repeaters.
 
@@ -14,11 +14,10 @@ For automatic startup, run `Register-ScheduledTask.ps1` as administrator once. I
 
 ## Scripts
 
-- `VAC.ps1` - runs both batch scripts
+- `VAC.ps1` - starts the repeaters; edit this to set your device names
+- `Start-AudioRepeater.ps1` - launches a single audiorepeater instance with given devices
 - `Stop-VAC.ps1` - kills any running audio repeater processes
 - `Restart-VAC.ps1` - stops running repeaters and starts fresh
-- `VAC_Speakers.bat` - configures speaker routing
-- `VAC_Dac.bat` - configures DAC routing
 - `Register-ScheduledTask.ps1` - registers a logon scheduled task for `VAC.ps1`
 
 ## Requirements
