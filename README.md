@@ -10,7 +10,7 @@ One-click Virtual Audio Cable configuration. Because clicking through audio sett
 
 2. Run `VAC.ps1` to start the repeaters.
 
-For automatic startup, run `Register-ScheduledTask.ps1` as administrator once. It registers a logon task that runs `VAC.ps1` each time you sign in.
+For automatic startup, run `Register-ScheduledTask.ps1` as administrator once. It registers a logon task that runs `VAC.ps1` each time you sign in. To remove it, run `Unregister-ScheduledTask.ps1` as administrator.
 
 ## Scripts
 
@@ -19,6 +19,7 @@ For automatic startup, run `Register-ScheduledTask.ps1` as administrator once. I
 - `Stop-VAC.ps1` - kills any running audio repeater processes
 - `Restart-VAC.ps1` - stops running repeaters and starts fresh
 - `Register-ScheduledTask.ps1` - registers a logon scheduled task for `VAC.ps1`
+- `Unregister-ScheduledTask.ps1` - removes the logon scheduled task
 
 ## Requirements
 
