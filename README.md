@@ -18,6 +18,7 @@ For automatic startup, run `Register-ScheduledTask.ps1` as administrator once. I
 - `Start-AudioRepeater.ps1` - launches a single audiorepeater instance with given devices
 - `Stop-VAC.ps1` - kills any running audio repeater processes
 - `Restart-VAC.ps1` - stops running repeaters and starts fresh
+- `Get-VACStatus.ps1` - reports whether audio repeaters are currently running
 - `Register-ScheduledTask.ps1` - registers a logon scheduled task for `VAC.ps1`
 - `Unregister-ScheduledTask.ps1` - removes the logon scheduled task
 
