@@ -6,7 +6,7 @@ One-click Virtual Audio Cable configuration. Because clicking through audio sett
 
 ## Setup
 
-1. Edit `VAC.ps1`. Set `-InputDevice` and `-OutputDevice` to the device names as they appear in Audio Repeater's dropdown. The names must match exactly.
+1. Edit `VAC.ps1`. Set `-InputDevice` and `-OutputDevice` to the device names as they appear in Audio Repeater's dropdown. The names must match exactly. Run `Get-AudioDevices.ps1` to list the exact names Windows has for your devices.
 
 2. Run `VAC.ps1` to start the repeaters.
 
@@ -15,6 +15,7 @@ For automatic startup, run `Register-ScheduledTask.ps1` as administrator once. I
 ## Scripts
 
 - `VAC.ps1` - starts the repeaters; edit this to set your device names
+- `Get-AudioDevices.ps1` - lists audio device names as Windows sees them, for filling in `VAC.ps1`
 - `Start-AudioRepeater.ps1` - launches a single audiorepeater instance with given devices
 - `Stop-VAC.ps1` - kills any running audio repeater processes
 - `Restart-VAC.ps1` - stops running repeaters and starts fresh
