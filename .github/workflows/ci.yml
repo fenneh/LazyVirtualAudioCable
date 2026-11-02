@@ -20,3 +20,13 @@ jobs:
             $results | Format-List
             exit 1
           }
+
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: run Pester tests
+        shell: pwsh
+        run: |
+          Install-Module Pester -RequiredVersion 5.7.1 -Force -Scope CurrentUser -ErrorAction Stop
+          Invoke-Pester -Path ./tests -CI -Output Detailed
