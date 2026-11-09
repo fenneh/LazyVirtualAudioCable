@@ -4,6 +4,7 @@ BeforeAll {
 
 Describe 'Start-AudioRepeater.ps1' {
     BeforeEach {
+        Mock Test-Path { $true }
         Mock Start-Process
     }
 
@@ -49,6 +50,15 @@ Describe 'Start-AudioRepeater.ps1' {
             $joined.Contains('/Buffers:4') -and
             $joined.Contains('/Priority:Normal')
         }
+    }
+
+    It 'fails with a clear error when audiorepeater is not installed' {
+        Mock Test-Path { $false }
+
+        { & "$script:repoRoot/Start-AudioRepeater.ps1" -InputDevice 'in' -OutputDevice 'out' } |
+            Should -Throw '*audiorepeater.exe not found*'
+
+        Should -Invoke Start-Process -Times 0 -Exactly
     }
 }
 

@@ -13,6 +13,11 @@ param(
 )
 
 $arPath = "C:\Program Files\Virtual Audio Cable\audiorepeater.exe"
+
+if (-not (Test-Path -LiteralPath $arPath)) {
+    throw "audiorepeater.exe not found at $arPath. Install Virtual Audio Cable or update the path in Start-AudioRepeater.ps1."
+}
+
 $argumentList = "/Input:`"$InputDevice`" /Output:`"$OutputDevice`" /SamplingRate:$SamplingRate /BitsPerSample:$BitsPerSample /Channels:$Channels /ChanCfg:`"$ChanCfg`" /BufferMs:$BufferMs /Buffers:$Buffers /Priority:$Priority /AutoStart"
 
 Start-Process -FilePath $arPath -WindowStyle Hidden -ArgumentList $argumentList
